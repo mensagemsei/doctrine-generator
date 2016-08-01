@@ -1,0 +1,22 @@
+{
+    "name": "globtec/doctrine-generator",
+    "description": "Generator to Doctrine ORM 2",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "José Carlos",
+            "email": "josecarlos@globtec.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "doctrine/orm": "2.5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Generator\\": "src/Generator/"
+        }
+    }
+}

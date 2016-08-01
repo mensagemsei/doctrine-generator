@@ -90,7 +90,7 @@ class Command extends SymfonyCmd
                 null, 
                 InputOption::VALUE_OPTIONAL, 
                 'The path to generate your entity and repository classes.', 
-                realpath(__DIR__ . '/../') . '/output'
+                'generator'
             );
     }
 
