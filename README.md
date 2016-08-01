@@ -2,16 +2,18 @@
 
 A PHP package customized to generate entity and repository classes of a project that uses Doctrine ORM in a command-line interface.
 
-## Require 
+## Installation
 
-Require the package Doctrine in your project installed with Composer.
+```
+composer require globtec/doctrine-generator dev-master --update-with-dependencies
+```
 
 ## Usage
 
 Before, you need create a PHP file named *generator.php* with the following code:
 
 ```php
-require_once 'generator/bootstrap.php';
+require_once 'vendor/autoload.php';
 
 // TODO: Add an instance of the EntityManager and assigns in a variable named $em 
 
