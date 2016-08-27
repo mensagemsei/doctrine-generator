@@ -264,15 +264,13 @@ class Generator
             $generator->setClassToExtend($superclass);
         }
         
-        if (null !== ($prefix = $this->getSequencePrefix())) {
-            /* @var $classMetadata \Doctrine\ORM\Mapping\ClassMetadata */
-            foreach ($metadata as $classMetadata) {
-                $className = end(explode('\\', $classMetadata->getName()));
-                
-                var_dump($this->getNsRepository() . $className); exit;
-                
-                $classMetadata->setCustomRepositoryClass($this->getNsRepository() . $className);
-                
+        /* @var $classMetadata \Doctrine\ORM\Mapping\ClassMetadata */
+        foreach ($metadata as $classMetadata) {
+            $className = end(explode('\\', $classMetadata->getName()));
+            
+            $classMetadata->setCustomRepositoryClass($this->getNsRepository() . $className);
+            
+            if (null !== ($prefix = $this->getSequencePrefix())) {
                 $classMetadata->setSequenceGeneratorDefinition(array(
                     'sequenceName' => strtoupper($prefix . '_' . $className),
                 ));
