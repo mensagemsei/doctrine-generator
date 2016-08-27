@@ -267,10 +267,14 @@ class Generator
         if (null !== ($prefix = $this->getSequencePrefix())) {
             /* @var $classMetadata \Doctrine\ORM\Mapping\ClassMetadata */
             foreach ($metadata as $classMetadata) {
-                $parts = explode('\\', $classMetadata->getName());
+                $className = end(explode('\\', $classMetadata->getName()));
+                
+                var_dump($this->getNsRepository() . $className); exit;
+                
+                $classMetadata->setCustomRepositoryClass($this->getNsRepository() . $className);
                 
                 $classMetadata->setSequenceGeneratorDefinition(array(
-                    'sequenceName' => strtoupper($prefix . '_' . end($parts))
+                    'sequenceName' => strtoupper($prefix . '_' . $className),
                 ));
             }
         }
