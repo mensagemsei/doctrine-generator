@@ -266,7 +266,7 @@ class Generator
         
         /* @var $classMetadata \Doctrine\ORM\Mapping\ClassMetadata */
         foreach ($metadata as $classMetadata) {
-            $className = end(explode('\\', $classMetadata->getName()));
+            $className = end((explode('\\', $classMetadata->getName())));
             
             $classMetadata->setCustomRepositoryClass($this->getNsRepository() . $className);
             
