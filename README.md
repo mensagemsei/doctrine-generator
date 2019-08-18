@@ -5,7 +5,7 @@ A PHP package customized to generate entity and repository classes of a project 
 ## Installation
 
 ```
-composer require globtec/doctrine-generator dev-master --update-with-dependencies
+composer require globtec/doctrine-generator --dev
 ```
 
 ## Usage
