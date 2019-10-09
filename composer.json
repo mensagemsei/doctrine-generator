@@ -4,13 +4,13 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "José Carlos",
-            "email": "josecarlos@globtec.com.br"
+            "name": "Gustavo César",
+            "email": "mensagemsei@gmail.com"
         }
     ],
     "require": {
-        "php": ">=5.4",
-        "doctrine/orm": "v2.5.4"
+        "php": ">=5.6.4",
+        "doctrine/orm": "^2.5"
     },
     "autoload": {
         "psr-4": {
